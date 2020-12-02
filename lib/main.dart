@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:blaze_screens/Screens/Reddish.dart';
+import 'package:blaze_screens/Screens/Glow.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+//        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ReddishScreen(),
+      home: GlowScreen(),
       routes: {
         ReddishScreen.routeName: (context) => ReddishScreen(),
+        GlowScreen.routeName: (context) => GlowScreen(),
       },
     );
   }

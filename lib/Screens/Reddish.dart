@@ -433,6 +433,7 @@ class _LoginState extends State<Login> {
         ),
       ),
       keyboardType: TextInputType.visiblePassword,
+      obscureText: true,
       validator: (String value) {
         if (value.isEmpty) {
           return 'Password is required';

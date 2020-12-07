@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:blaze_screens/Screens/Reddish.dart';
 import 'package:blaze_screens/Screens/Glow.dart';
+import './Screens/BlueRoll.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
 //        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginP(),
+      home: BlueRoll(),
       routes: {
         ReddishScreen.routeName: (context) => ReddishScreen(),
-        LoginP.routeName: (context) => LoginP(),
+        GlowScreen.routeName: (context) => GlowScreen(),
+        BlueRoll.routeName: (context) => BlueRoll(),
       },
     );
   }

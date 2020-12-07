@@ -2,83 +2,83 @@ import 'package:flutter/material.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/widgets.dart';
 
-//class GlowScreen extends StatelessWidget {
-//  static const routeName = '/glow-ui';
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    var media = MediaQuery.of(context).size;
-//    return Scaffold(
-//      body: Container(
-//        height: media.height,
-//        width: double.infinity,
-//        color: Colors.red[600],
-//        child: Column(
-////          mainAxisAlignment: MainAxisAlignment.center,
-//          children: <Widget>[
-//            Spacer(),
-//            Expanded(
-//              flex: 2,
-//              child: AvatarGlow(
-//                endRadius: 170.0,
-//                child: Material(
-//                  elevation: 8.0,
-//                  shape: CircleBorder(),
-//                  child: CircleAvatar(
-//                    backgroundColor: Colors.grey[100],
-//                    child: Image.asset(
-//                      'images/animal.png',
-//                      height: 190,
-//                    ),
-//                    radius: 90.0,
-//                  ),
-//                ),
-//              ),
-////                  CircleAvatar(
-////                backgroundColor: Colors.white,
-////                radius: 90.0,
-////                backgroundImage: AssetImage('images/babe.jpg'),
-////              ),
-//            ),
-//
-////        image: DecorationImage(
-////          image: AssetImage('images/girl4.png'),
-////          fit: BoxFit.cover,
-//            Expanded(
-//              child: Column(
-//                children: <Widget>[
-//                  Text(
-//                    'Durar HR',
-//                    style: TextStyle(
-//                      color: Colors.white,
-//                      fontSize: 45.0,
-//                      fontWeight: FontWeight.bold,
-//                      letterSpacing: 2,
-//                    ),
-//                  ),
-//                  SizedBox(
-//                    height: 5.0,
-//                  ),
-//                  Text(
-//                    'The Complete HR Solutions',
-//                    style: TextStyle(
-//                      color: Colors.white,
-//                      fontSize: 20.0,
-//                      fontWeight: FontWeight.w300,
-////                      letterSpacing: 2,
-//                    ),
-//                  ),
-//                ],
-//              ),
-//            ),
-//          ],
-//        ),
-//      ),
-//    );
-//  }
-//}
+class GlowScreen extends StatelessWidget {
+  static const routeName = '/glow-ui';
 
-class LoginP extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Container(
+        height: media.height,
+        width: double.infinity,
+        color: Colors.red[600],
+        child: Column(
+//          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Spacer(),
+            Expanded(
+              flex: 2,
+              child: AvatarGlow(
+                endRadius: 170.0,
+                child: Material(
+                  elevation: 8.0,
+                  shape: CircleBorder(),
+                  child: CircleAvatar(
+                    backgroundColor: Colors.grey[100],
+                    child: Image.asset(
+                      'images/animal.png',
+                      height: 190,
+                    ),
+                    radius: 90.0,
+                  ),
+                ),
+              ),
+//                  CircleAvatar(
+//                backgroundColor: Colors.white,
+//                radius: 90.0,
+//                backgroundImage: AssetImage('images/babe.jpg'),
+//              ),
+            ),
+
+//        image: DecorationImage(
+//          image: AssetImage('images/girl4.png'),
+//          fit: BoxFit.cover,
+            Expanded(
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    'Squitle',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 2,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+                  Text(
+                    'Achieve your dreams..',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w300,
+//                      letterSpacing: 2,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Login extends StatelessWidget {
   static const routeName = '/glow-ui';
 
   String _username;
@@ -672,7 +672,7 @@ class Signup extends StatelessWidget {
                         FlatButton(
                           child: RichText(
                             text: TextSpan(
-                              text: 'Already have a account? ',
+                              text: 'Already have an account? ',
                               style: TextStyle(
                                 color: Colors.black,
 //                              fontWeight: FontWeight.bold,
@@ -693,7 +693,7 @@ class Signup extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LoginP(),
+                                builder: (context) => Login(),
                               ),
                             );
                           },

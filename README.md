@@ -3,8 +3,7 @@
 All designed by me using Flutter
 
 #1. Reddish Billion Deal
-If you want to embed images, this is how you do it:
 
-![Billion Deal](https://user-images.githubusercontent.com/34488661/100912998-78893800-34d1-11eb-9afa-7779f795a763.png)
-![Billion Deal2](https://user-images.githubusercontent.com/34488661/100913111-a2daf580-34d1-11eb-897c-6b9070c0b26a.png)
-![Billion Deal3](https://user-images.githubusercontent.com/34488661/100913137-aa9a9a00-34d1-11eb-8abf-df9ee17d21cd.png)
+![Billion Deal](https://user-images.githubusercontent.com/34488661/101883962-47c39580-3b98-11eb-9959-8f85880ebb91.png)
+![Billion Deal2](https://user-images.githubusercontent.com/34488661/101883968-498d5900-3b98-11eb-9be7-1d8f9e23c61d.png)
+![Billion Deal3](https://user-images.githubusercontent.com/34488661/101883975-4abe8600-3b98-11eb-831a-ff3bdf0637b6.png)

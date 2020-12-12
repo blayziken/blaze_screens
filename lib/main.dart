@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 //        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Fruity(),
+      home: BlueRoll(),
       routes: {
         ReddishScreen.routeName: (context) => ReddishScreen(),
         GlowScreen.routeName: (context) => GlowScreen(),

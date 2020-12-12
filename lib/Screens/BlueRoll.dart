@@ -204,11 +204,7 @@ class Signup extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
 //            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
-          ),
-          focusedBorder: OutlineInputBorder(
-//            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
+            borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
           ),
         ),
         keyboardType: TextInputType.emailAddress,
@@ -244,11 +240,7 @@ class Signup extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
 //            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
-          ),
-          focusedBorder: OutlineInputBorder(
-//            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
+            borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
           ),
         ),
         validator: (String value) {
@@ -275,11 +267,7 @@ class Signup extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
 //            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
-          ),
-          focusedBorder: OutlineInputBorder(
-//            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
+            borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
           ),
         ),
         obscureText: true,
@@ -357,22 +345,32 @@ class Signup extends StatelessWidget {
                   ),
                   child: Column(
                     children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 70.0,
-                          top: 70.0,
-                          right: 60.0,
-                          bottom: 40.0,
-                        ),
-                        child: Form(
-                          key: _formKey,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              _buildUserName(),
-                              _buildEmail(),
-                              _buildPassword(),
-                            ],
+                      Container(
+//                        color: Colors.teal,
+                        margin: EdgeInsets.only(bottom: 5.0),
+                        height: media.height * 0.37,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            left: 70.0,
+                            top: 30.0,
+                            right: 60.0,
+                          ),
+                          child: Form(
+                            key: _formKey,
+                            child: Column(
+//                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                _buildUserName(),
+                                SizedBox(
+                                  height: 15.0,
+                                ),
+                                _buildEmail(),
+                                SizedBox(
+                                  height: 15.0,
+                                ),
+                                _buildPassword(),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -409,34 +407,37 @@ class Signup extends StatelessWidget {
                           ),
                         ),
                       ),
-                      FlatButton(
-                        child: RichText(
-                          text: TextSpan(
-                            text: 'or sign up with ',
-                            style: TextStyle(
-                              color: Colors.blue[400],
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15.0,
-                            ),
-                            children: <TextSpan>[
-                              TextSpan(
-                                text: 'google',
-                                style: TextStyle(
-                                  color: Colors.blue[800],
-                                  fontWeight: FontWeight.w900,
-                                ),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: InkWell(
+                          child: RichText(
+                            text: TextSpan(
+                              text: 'or sign up with ',
+                              style: TextStyle(
+                                color: Colors.blue[400],
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15.0,
                               ),
-                            ],
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: 'google',
+                                  style: TextStyle(
+                                    color: Colors.blue[800],
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        onPressed: () {
+                          onTap: () {
 //                    Navigator.push(
 //                      context,
 //                      MaterialPageRoute(
 //                        builder: (context) => Signup(),
 //                      ),
 //                    );
-                        },
+                          },
+                        ),
                       ),
                     ],
                   ),
@@ -515,11 +516,7 @@ class Login extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
 //            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
-          ),
-          focusedBorder: OutlineInputBorder(
-//            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
+            borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
           ),
         ),
         validator: (String value) {
@@ -546,11 +543,7 @@ class Login extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
 //            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
-          ),
-          focusedBorder: OutlineInputBorder(
-//            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
+            borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
           ),
         ),
         obscureText: true,
@@ -626,23 +619,28 @@ class Login extends StatelessWidget {
                   width: double.infinity,
                   child: Column(
                     children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 70.0,
-                          top: 90.0,
-                          right: 60.0,
-                          bottom: 80.0,
-                        ),
-                        child: Form(
-                          key: _formKey,
-                          child: Container(
-                            height: media.height * 0.17,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                _buildUserName(),
-                                _buildPassword(),
-                              ],
+                      Container(
+//                        color: Colors.teal,
+                        height: media.height * 0.26,
+                        margin: EdgeInsets.only(bottom: 40.0),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            left: 70.0,
+                            top: 50.0,
+                            right: 60.0,
+                          ),
+                          child: Form(
+                            key: _formKey,
+                            child: Container(
+                              height: media.height * 0.17,
+                              child: Column(
+//                                mainAxisAlignment:
+//                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  _buildUserName(),
+                                  _buildPassword(),
+                                ],
+                              ),
                             ),
                           ),
                         ),

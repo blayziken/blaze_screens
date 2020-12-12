@@ -79,7 +79,7 @@ class GlowScreen extends StatelessWidget {
 }
 
 class Login extends StatelessWidget {
-  static const routeName = '/glow-ui';
+  static const routeName = '/glowLogin-ui';
 
   String _username;
   String _password;

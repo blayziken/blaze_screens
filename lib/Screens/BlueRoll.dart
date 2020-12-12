@@ -17,7 +17,7 @@ class BlueRoll extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
 //          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-//            Spacer(),
+            Spacer(),
             Expanded(
               flex: 2,
               child: Container(
@@ -25,12 +25,13 @@ class BlueRoll extends StatelessWidget {
                 width: 200,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('images/animal.png'),
+                    image: AssetImage('images/6824631.jpg'),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
             ),
+            Spacer(),
             Expanded(
               flex: 3,
               child: Column(
@@ -48,7 +49,7 @@ class BlueRoll extends StatelessWidget {
                   Text(
                     'Start your adventure!',
                     style: TextStyle(
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w400,
 //                    color: Colors.grey,
                       fontSize: 20.0,
                     ),
@@ -72,8 +73,12 @@ class BlueRoll extends StatelessWidget {
                             height: 40,
                             width: 30,
                             decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('images/babe.jpg'))),
+                              color: Colors.white,
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    'images/google-gogle-network-logo-icon.png'),
+                              ),
+                            ),
                           ),
                           SizedBox(
                             width: 15.0,
@@ -122,7 +127,7 @@ class BlueRoll extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.blue[600],
                           fontSize: 18.0,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                     ),

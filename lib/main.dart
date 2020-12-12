@@ -1,3 +1,4 @@
+import 'package:blaze_screens/Screens/Fruity.dart';
 import 'package:flutter/material.dart';
 import 'package:blaze_screens/Screens/Reddish.dart';
 import 'package:blaze_screens/Screens/Glow.dart';
@@ -13,15 +14,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Blaze Screens',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
 //        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BlueRoll(),
+      home: Fruity(),
       routes: {
         ReddishScreen.routeName: (context) => ReddishScreen(),
         GlowScreen.routeName: (context) => GlowScreen(),
         BlueRoll.routeName: (context) => BlueRoll(),
+        Fruity.routeName: (context) => Fruity(),
       },
     );
   }

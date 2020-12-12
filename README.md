@@ -1,8 +1,8 @@
-## My UI Login and Signup Screens
+### My UI Login and Signup Screens
 
-All designed by me using Flutter
+#All designed by me using Flutter
 
-**###Reddish Billion Deal**
+##Reddish Billion Deal
 
 ![Billion Deal](https://user-images.githubusercontent.com/34488661/101883962-47c39580-3b98-11eb-9959-8f85880ebb91.png)
 ![Billion Deal2](https://user-images.githubusercontent.com/34488661/101883968-498d5900-3b98-11eb-9be7-1d8f9e23c61d.png)

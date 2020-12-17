@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:blaze_screens/Screens/Reddish.dart';
 import 'package:blaze_screens/Screens/Glow.dart';
 import './Screens/BlueRoll.dart';
+import './Screens/Yellow.dart';
+import './Screens/Aboard.dart';
+import './Screens/TC.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,12 +22,15 @@ class MyApp extends StatelessWidget {
 //        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BlueRoll(),
+      home: TC(),
       routes: {
         ReddishScreen.routeName: (context) => ReddishScreen(),
         GlowScreen.routeName: (context) => GlowScreen(),
         BlueRoll.routeName: (context) => BlueRoll(),
         Fruity.routeName: (context) => Fruity(),
+        Yellow.routeName: (context) => Yellow(),
+        Aboard.routeName: (context) => Aboard(),
+        TC.routeName: (context) => TC()
       },
     );
   }

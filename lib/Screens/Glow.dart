@@ -1,9 +1,31 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/widgets.dart';
 
-class GlowScreen extends StatelessWidget {
+class GlowScreen extends StatefulWidget {
   static const routeName = '/glow-ui';
+
+  @override
+  _GlowScreenState createState() => _GlowScreenState();
+}
+
+class _GlowScreenState extends State<GlowScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(
+      Duration(seconds: 4),
+      () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Login(),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -147,32 +169,10 @@ class Login extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(left: 15.0, top: 50.0),
-                  child: Row(
-                    children: <Widget>[
-                      IconButton(
-                        icon: Icon(
-                          Icons.arrow_back_ios,
-                          color: Colors.red,
-                          size: 30.0,
-                        ),
-                        onPressed: () => Navigator.pop(context),
-                      ),
-                      Text(
-                        'Back',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
                 Expanded(
                   flex: 0,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 10.0, left: 20),
+                    padding: const EdgeInsets.only(top: 50.0, left: 20),
                     child: Container(
                       height: 170,
                       width: 170,
@@ -353,201 +353,216 @@ class Signup extends StatelessWidget {
     var media = MediaQuery.of(context).size;
 
     Widget _buildFullName() {
-      return TextFormField(
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20.0,
-        ),
-        decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.red),
-            borderRadius: BorderRadius.circular(5),
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5),
-          ),
-          prefixIcon: Icon(
-            Icons.person_outline,
-            size: 25.0,
-            color: Colors.red,
-          ),
-          labelText: 'FULL NAME',
-          labelStyle: TextStyle(
-            color: Colors.black,
+      return Container(
+        height: 50,
+        child: TextFormField(
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
             fontSize: 20.0,
-            fontWeight: FontWeight.normal,
           ),
-        ),
-        validator: (String value) {
-          if (value.isEmpty) {
-            return 'Full Name is required';
-          }
+          decoration: InputDecoration(
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            prefixIcon: Icon(
+              Icons.person_outline,
+              size: 25.0,
+              color: Colors.red,
+            ),
+            labelText: 'FULL NAME',
+            labelStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          validator: (String value) {
+            if (value.isEmpty) {
+              return 'Full Name is required';
+            }
 
-          return null;
-        },
-        onSaved: (String value) {
-          _name = value;
-        },
+            return null;
+          },
+          onSaved: (String value) {
+            _name = value;
+          },
+        ),
       );
     }
 
     Widget _buildEmail() {
-      return TextFormField(
-        keyboardType: TextInputType.emailAddress,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20.0,
-        ),
-        decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.red),
-            borderRadius: BorderRadius.circular(5),
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5),
-          ),
-          prefixIcon: Icon(
-            Icons.mail_outline,
-            size: 25.0,
-            color: Colors.red,
-          ),
-          labelText: 'EMAIL',
-          labelStyle: TextStyle(
-            color: Colors.black,
+      return Container(
+        height: 50,
+        child: TextFormField(
+          keyboardType: TextInputType.emailAddress,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
             fontSize: 20.0,
-            fontWeight: FontWeight.normal,
           ),
-        ),
-        validator: (String value) {
-          if (value.isEmpty) {
-            return 'Email is required';
-          }
+          decoration: InputDecoration(
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            prefixIcon: Icon(
+              Icons.mail_outline,
+              size: 25.0,
+              color: Colors.red,
+            ),
+            labelText: 'EMAIL',
+            labelStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          validator: (String value) {
+            if (value.isEmpty) {
+              return 'Email is required';
+            }
 
-          return null;
-        },
-        onSaved: (String value) {
-          _email = value;
-        },
+            return null;
+          },
+          onSaved: (String value) {
+            _email = value;
+          },
+        ),
       );
     }
 
     Widget _buildPhone() {
-      return TextFormField(
-        keyboardType: TextInputType.phone,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20.0,
-        ),
-        decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.red),
-            borderRadius: BorderRadius.circular(5),
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5),
-          ),
-          prefixIcon: Icon(
-            Icons.smartphone,
-            size: 25.0,
-            color: Colors.red,
-          ),
-          labelText: 'PHONE',
-          labelStyle: TextStyle(
-            color: Colors.black,
+      return Container(
+        height: 50,
+        child: TextFormField(
+          keyboardType: TextInputType.phone,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
             fontSize: 20.0,
-            fontWeight: FontWeight.normal,
           ),
-        ),
-        validator: (String value) {
-          if (value.isEmpty) {
-            return 'Phone is required';
-          }
+          decoration: InputDecoration(
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            prefixIcon: Icon(
+              Icons.smartphone,
+              size: 25.0,
+              color: Colors.red,
+            ),
+            labelText: 'PHONE',
+            labelStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          validator: (String value) {
+            if (value.isEmpty) {
+              return 'Phone is required';
+            }
 
-          return null;
-        },
-        onSaved: (String value) {
-          _phone = value;
-        },
+            return null;
+          },
+          onSaved: (String value) {
+            _phone = value;
+          },
+        ),
       );
     }
 
     Widget _buildPassword() {
-      return TextFormField(
-        obscureText: true,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20.0,
-        ),
-        decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.red),
-            borderRadius: BorderRadius.circular(5),
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5),
-          ),
-          prefixIcon: Icon(
-            Icons.lock_outline,
-            size: 25.0,
-            color: Colors.red,
-          ),
-          labelText: 'PASSWORD',
-          labelStyle: TextStyle(
-            color: Colors.black,
+      return Container(
+        height: 50,
+        child: TextFormField(
+          obscureText: true,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
             fontSize: 20.0,
-            fontWeight: FontWeight.normal,
           ),
-        ),
-        validator: (String value) {
-          if (value.isEmpty) {
-            return 'Password is required';
-          }
+          decoration: InputDecoration(
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            prefixIcon: Icon(
+              Icons.lock_outline,
+              size: 25.0,
+              color: Colors.red,
+            ),
+            labelText: 'PASSWORD',
+            labelStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          validator: (String value) {
+            if (value.isEmpty) {
+              return 'Password is required';
+            }
 
-          return null;
-        },
-        onSaved: (String value) {
-          _password = value;
-        },
+            return null;
+          },
+          onSaved: (String value) {
+            _password = value;
+          },
+        ),
       );
     }
 
     Widget _buildConfirmPassword() {
-      return TextFormField(
-        obscureText: true,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20.0,
-        ),
-        decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.red),
-            borderRadius: BorderRadius.circular(5),
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5),
-          ),
-          prefixIcon: Icon(
-            Icons.lock_outline,
-            size: 25.0,
-            color: Colors.red,
-          ),
-          labelText: 'CONFIRM PASSWORD',
-          labelStyle: TextStyle(
-            color: Colors.black,
+      return Container(
+        height: 50,
+        child: TextFormField(
+          obscureText: true,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
             fontSize: 20.0,
-            fontWeight: FontWeight.normal,
           ),
-        ),
-        validator: (String value) {
-          if (value.isEmpty) {
-            return 'Please confirm password';
-          }
+          decoration: InputDecoration(
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            prefixIcon: Icon(
+              Icons.lock_outline,
+              size: 25.0,
+              color: Colors.red,
+            ),
+            labelText: 'CONFIRM PASSWORD',
+            labelStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          validator: (String value) {
+            if (value.isEmpty) {
+              return 'Please confirm password';
+            }
 
-          return null;
-        },
-        onSaved: (String value) {
-          _password = value;
-        },
+            return null;
+          },
+          onSaved: (String value) {
+            _password = value;
+          },
+        ),
       );
     }
 
@@ -593,9 +608,7 @@ class Signup extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 50.0,
-              ),
+              SizedBox(height: 20.0),
               Padding(
                 padding: const EdgeInsets.only(
                   left: 40.0,
@@ -604,11 +617,11 @@ class Signup extends StatelessWidget {
                 child: Container(
                   width: double.infinity,
                   height: media.height * 0.5,
-//                color: Colors.tealAccent,
+//                  color: Colors.tealAccent,
                   child: Form(
                     key: _signUpformKey,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         _buildFullName(),
                         _buildEmail(),
@@ -620,7 +633,7 @@ class Signup extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30.0),
+              SizedBox(height: 50.0),
               Center(
                 child: Column(
                   children: <Widget>[

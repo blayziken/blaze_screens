@@ -68,15 +68,14 @@ class BlueRoll extends StatelessWidget {
                       splashColor: Colors.white,
                       onPressed: () {},
                       child: Row(
+//                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Container(
                             height: 40,
                             width: 30,
                             decoration: BoxDecoration(
-                              color: Colors.white,
                               image: DecorationImage(
-                                image: AssetImage(
-                                    'images/google-gogle-network-logo-icon.png'),
+                                image: AssetImage('images/google1.png'),
                               ),
                             ),
                           ),

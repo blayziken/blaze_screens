@@ -14,6 +14,7 @@ dependencies:
   flutter:
     sdk: flutter
   avatar_glow: ^1.2.0
+  gradient_widgets: ^0.5.1
 
 
 

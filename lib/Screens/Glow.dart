@@ -14,7 +14,6 @@ class GlowScreen extends StatefulWidget {
 class _GlowScreenState extends State<GlowScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(
       Duration(seconds: 4),

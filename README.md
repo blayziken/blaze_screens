@@ -36,7 +36,7 @@
 ![Yellow](https://user-images.githubusercontent.com/34488661/102340996-804be080-3f97-11eb-8e39-d787e88ff27e.png)
 ![Yellow](https://user-images.githubusercontent.com/34488661/102366943-7fc44180-3fb9-11eb-9a8d-3fc1d942353b.png)
 
-## Blog
+## Blog (Plain)
 
-![Blog]()
-![Blog]()
+![Blog](https://user-images.githubusercontent.com/34488661/128964580-27c09562-5c84-40df-8511-a47fd674ec1b.jpg)
+![Blog](https://user-images.githubusercontent.com/34488661/128964578-dfe80115-1322-454c-8932-7d86616d34b8.jpg)

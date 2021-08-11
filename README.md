@@ -38,5 +38,5 @@
 
 ## Blog
 
-![Blog](https://user-images.githubusercontent.com/34488661/128959545-b94de665-a4e8-4f55-904a-4441c785fca5.jpg)
-![Blog](https://user-images.githubusercontent.com/34488661/128959543-502cc75a-e4c3-4341-a077-6ac47378fbae.jpg)
+![Blog]()
+![Blog]()
